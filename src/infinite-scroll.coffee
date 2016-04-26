@@ -67,6 +67,7 @@ mod.directive 'infiniteScroll', ['$rootScope', '$window', '$interval', 'THROTTLE
         checkWhenEnabled = true
 
         if scrollEnabled
+          checkWhenEnabled = false    
           if scope.$$phase || $rootScope.$$phase
             scope.infiniteScroll()
           else
